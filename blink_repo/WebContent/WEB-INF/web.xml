@@ -1,0 +1,27 @@
+<web-app>
+<display-name>HW3 (Worker)
+</display-name>
+<servlet>
+	<servlet-name>WorkerServlet</servlet-name>
+	<servlet-class>com.blink.crawler.WorkerNode.Worker</servlet-class>
+	<init-param>
+		<param-name>storage</param-name>
+		<param-value>/home/cis455/storage_work/</param-value>
+	</init-param>
+	<init-param><param-name>master</param-name><param-value>127.0.0.1:8080</param-value></init-param>
+	<init-param><param-name>port</param-name><param-value>8081</param-value></init-param>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+	<servlet-name>WorkerServlet</servlet-name>
+	<url-pattern>/start_crawl</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>WorkerServlet</servlet-name>
+	<url-pattern>/from_worker</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>WorkerServlet</servlet-name>
+	<url-pattern>/*</url-pattern>
+</servlet-mapping>
+</web-app>

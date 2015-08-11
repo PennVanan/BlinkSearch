@@ -1,0 +1,10 @@
+{"namespace": "",
+ "type": "record",
+ "name": "DocumentSchema",
+ "fields": [
+     {"name": "docID", "type": "long"},
+     {"name": "content",  "type": "string"},
+     {"name": "filetype", "type": "string", "default" : "html"},
+     {"name": "charset", "type" : "string", "default" : "UTF-8"}
+ ]
+}

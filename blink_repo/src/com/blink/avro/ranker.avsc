@@ -1,0 +1,15 @@
+{"namespace": "",
+ "type": "record",
+ "name": "RankerSchema",
+ "fields": [
+     {"name": "docID", "type": "long"},
+     {"name": "url",  "type": "string"},
+     {"name": "outlinks", "type":{
+     						   	"type": "array",
+          						"items":{
+            						"type":"string"
+            						}
+							}
+	}
+ ]
+}
